@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>이벤트처리</title>
+  </head>
+  <body>
+    <!-- 버튼을 클리하면 선택한 메뉴를 alert으로 출력한다. -->
+    <!-- on 이벤트 이름 : js를 실행하는 html 속성 -->
+    <select id="menu">
+      <option>짜장</option>
+      <option>짬뽕</option>
+      <option>탕수육</option>
+    </select>
+    <button onclick="print();">선택</button>
+    <script>
+      function print() {
+        // val() : form안에 들어가는 요소들의 값(value)
+        //alert($("#menu").val());
+        //alert($("select").val()); -> 여러개 있을 수 있어서 보통은 이렇게 작성하지 않는다.
+      }
+    </script>
+  </body>
+</html>

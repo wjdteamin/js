@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    점수 : <input type="number" id="jumsu" />
+    <button id="panjung">판정하기</button>
+    <script>
+      // 점수가 90점이상이면 우수, 70점이상이면 통과, 미만이면 재시험
+      $("#panjung").click(function () {
+        // click은 항상 동작하는 것이 아니다. 
+        let jumsu = $("#jumsu").val();
+        if (jumsu >= 90) {
+          alert("우수");
+        } else if (jumsu >= 70) {
+          alert("통과");
+        } else {
+          alert("재시험");
+        }
+      });
+
+
+      // 범용으로 만드는 법 
+      //   $("#panjung").on('click', function){여기에 작성하면 된다.}
+      // click은 행동을 의미한다. 절대로 동작하지 않는 경우가 있다.
+    </script>
+  </body>
+</html>

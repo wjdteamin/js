@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스코프</title>
+    <script>
+      // aa = 100; 방지용이다.
+      "use strict";
+
+      let a = 10;
+      function aaa() {
+        let b = 20;
+
+        // 키워드 없이 변수를 만들면...전역으로 간다.
+        aa = 100;
+        console.log(aa);
+      }
+      // b가 태어났다가....}하면서 파괴
+      aaa();
+      //console.log(b);
+      console.log(`여기서는 ` + aa);
+    </script>
+  </head>
+  <body></body>
+</html>

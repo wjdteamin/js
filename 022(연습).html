@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 점수가 70점이상이면 합격, 아니면 불합격이라고 alert() 출력-->
+    점수 : <input type="number" id="jumsu" />
+    <button onclick="print();">출력</button>
+
+    <!-- 올해의 년도는 2024. 나이를 출력하시오-->
+    생년:<input type="number" id="year" />
+    <button onclick="nai();">나이출력</button>
+
+    <script>
+      function print() {
+        const jumsu = $("#jumsu").val();
+
+        if (jumsu >= 70) {
+          alert("합격!!");
+        } else {
+          alert("불합격!!");
+        }
+      }
+
+      function nai() {
+        let date = new Date();
+        let thisYear = date.getFullYear();
+        const year = $(`#year`).val();
+        let nai = thisYear - year;
+        alert(`${nai}세`);
+      }
+    </script>
+  </body>
+</html>

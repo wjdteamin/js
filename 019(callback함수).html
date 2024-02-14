@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 개발자가 만든 다음, 위탁해서 실행
+
+      // setInterval : 정해진 간격으로 기능을 실행한다.
+      let i = 1;
+      function insa() {
+        console.log(`${i++}번째 안녕하세요`);
+      }
+      //setInterval(insa, 1);
+      // 기능은 사용자가 설정하는 것이다. 기능 -> 함수
+
+      setInterval(function () {
+        let d = new Date();
+        console.log(d);
+      }, 1000);
+    </script>
+  </head>
+  <body></body>
+</html>
+<!-- 
+    함수를 보내기 다른 사람에게 넘겨주기 위해서 인자 안에 함수를 넣을 수 있게 해주는 것이다.
+    자바는 하기가 좀 힘들다.
+-->

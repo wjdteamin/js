@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js는 함수를 인자로 전달할 수 있다.</title>
+  </head>
+  <body>
+    <script>
+      // 변수를 인자로 하는 함수
+      function f1(a) {
+        console.log(a);
+      }
+
+      // 함수를 인자로 하는 함수
+      function test1(f) {
+        f();
+      }
+
+      // f = function(){ }
+      test1(function () {
+        console.log("안녕하세요");
+      });
+
+      // test1을 호출할 때, function(){}을 인자로 보낸다? 그럼 f()가 function(){ console.log("안녕하세요");}이 된다.
+
+    // callback -> 내가 함수를 만들어서 남에게 맡긴다.
+    </script>
+  </body>
+</html>
