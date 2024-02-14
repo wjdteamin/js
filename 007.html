@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 기본타입 : undefined, number, string, boolean
+      let a = 10;
+      console.log(typeof a);
+
+      //참조타입
+      //클래스를 이용해서 객체 만들기
+      let date = new Date();
+      console.log(date.getFullYear());
+
+      // 2. 이름과 값으로 객체 만들기
+      let tv = {
+        제조사: "삼성",
+        크기: 75,
+        가격: 2000000,
+      };
+
+      let info = {
+        아이디: "인생",
+        비밀번호: 1234,
+      };
+
+      console.log(info.아이디);
+      console.log(tv.제조사);
+    </script>
+  </body>
+</html>

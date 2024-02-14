@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = "10";
+      console.log(parseInt(a)); //10
+
+      let b = "abcd";
+      console.log(parseInt(b)); // NaN도 숫자다.
+      // 숫자는 보라색 아니면 파랑색이다. 문자는 검은색이다.
+
+      //    b 값이 숫자로 바꿀 수 있으면 바꿔서 출력, 없으면 에러메시지
+      if (isNaN(parseInt(b))) {
+        alert("숫자를 입력하세요");
+      } else {
+        alert(parseInt(b));
+      }
+    </script>
+  </body>
+</html>

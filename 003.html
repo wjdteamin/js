@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크립트위 위치</title>
+    <script>
+      // 줄마다 세미콜론을 자동으로 넣는다.
+      // 만약 세미콜론 직접 붙이지 않으면 한줄에 alert를 다 쓰면 안된다.
+      // head영역의 자바스크립트는 body에 접근할 수 없다.  - 생성이 되지 않아서 그렇다.
+      alert("헤드 영역");
+      alert("우리나라");
+    </script>
+  </head>
+  <body>
+    <script>
+      // body영역 마지막의 자바스크립트는 body에 접근 가능하다. 생성 되서.
+      alert("body 영역");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비교연산</title>
+    <script>
+      let a = 100;
+      let b = "100";
+      let x; // undefined
+      let y = null;
+
+      console.log(typeof x);
+      console.log(typeof y);
+      // ==는 타입은 비교하지 않고 값만 비교
+      console.log(a == b);
+      console.log(x == y);
+
+      // ===는 타입까지 비교
+      console.log(a === b);
+      console.log(x === y);
+    </script>
+  </head>
+  <body></body>
+</html>

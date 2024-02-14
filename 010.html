@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 10;
+
+      // 단독으로 사용하면 증감
+      ++a; // 전위(prefix)
+      b++; // 후위(postfix)
+
+      // 다른연산과 같이 사용하면
+      console.log(++a); // 전위 : 증가한 다음 출력 - 12
+      console.log(b++); // 후위 : 출력한 다음 증가 - 11
+
+      console.log(a == b);
+    </script>
+  </body>
+</html>
