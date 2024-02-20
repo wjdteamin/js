@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        display: flex;
+        border: 1px solid rebeccapurple;
+        /* around는  맨 앞과 뒤과 가운데의 절반정도다. */
+        justify-content: space-around;
+        align-items: center;
+        width: 600px;
+        height: 400px;
+      }
+      .aside {
+        width: 100px;
+        height: 100px;
+        border: 1px solid skyblue;
+        /* text-align: center; */
+        /* line-height: 100px; */
+        display: flex;
+         justify-content: center; 
+         align-items: center; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="aside">1</div>
+      <div class="aside">2</div>
+      <div class="aside">3</div>
+    </div>
+  </body>
+</html>

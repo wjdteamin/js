@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ajax은 비동기로 실행
+      // 동기(synchronous) : A->B->C
+      // 비동기 : 동시에 실행된다 .
+      $.ajax({
+        url: "https://dog.ceo/api/breeds/image/random",
+        method: "get",
+        success: function () {
+            // 서버에 응답이 도착하면 실행된다 .
+            // 성공했다는 의미는 서버에서 오류가 발생하지 않았다. - > 200
+          console.log("ajax 통신 성공");
+        },
+      });
+      console.log("ajax 통신이 끝났어요");
+    </script>
+  </body>
+</html>
