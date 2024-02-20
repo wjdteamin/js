@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float : 좌우로 배치</title>
+    <style>
+      .left {
+        width: 100px;
+        height: 100px;
+        background-color: #eee;
+        float: left;
+      }
+
+      .right {
+        width: 100px;
+        height: 200px;
+        background-color: #ccc;
+        float: right;
+      }
+
+      .parent {
+        border: 1px solid red;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        원래 float은 사진과 글을 배치하는 방법을 지정
+        -float의 값은 left와 right
+        -공중에 떠서 이동하기 때문에 부모가 자식을 포함하지 않는다.
+
+        float을 clear해야한다. -> 부모가 자식을 포함하도록한다. 
+    -->
+    <div class="parent">
+      <div class="left">aaaaaaaa</div>
+      <div class="right">bbbbbbb</div>
+    </div>
+  </body>
+</html>

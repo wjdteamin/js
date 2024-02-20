@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // JQuery를 head영역에 작성하자
+      $(document).ready(function () {
+        // 비동기실행은 -> 동시에 작업을 하는 것이다. 시간 줄이려고
+        //$.ajax는 비동기실행, 인자는 자바스크립트 객체
+        // js 객체에서 생략 불가능한 멤버는 url 필드와 success 메소드다.
+        
+        // success 메소드는 콜백 메소드다. ??
+      });
+
+      $.ajax({
+        url: "https://koreanjson.com/users",
+        success: function (result) {
+          // 서버에 들어오면 실행하는 것이다. 서버에서 결과가 나오면
+          // success 메소드는 서버의 응답이 도착하면 실행
+          // 서버의 응답이 함수의 인자
+
+          console.log(result);
+          for (let user of result) {
+            console.log(user);
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

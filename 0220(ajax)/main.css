@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#app {
+  width: 1000px;
+  margin: 0 auto;
+}
+header,
+footer {
+  height: 50px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  letter-spacing: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+header,
+.nav,
+main {
+  margin-bottom: 5px;
+}
+.left {
+  width: 100px;
+  background-color: pink;
+  height: 200px;
+}
+.right {
+  background-color: pink;
+  width: 100px;
+  height: 200px;
+}
+.section {
+  width: 800px;
+  min-height: 600px;
+}
+main {
+  display: flex;
+}
+#search {
+  width: 300px;
+  border: 1px solid #ddd;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+#search input {
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: none;
+}
+.nav {
+  background-color: #333;
+}
+nav > ul {
+  list-style: none;
+  display: flex;
+}
+nav > ul > li {
+  background-color: #333;
+  width: 120px;
+  height: 50px;
+}
+nav > ul > li > a {
+  color: wheat;
+  text-decoration: none;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+nav > ul > li > a:hover {
+  background-color: black;
+}
+nav > ul {
+  margin-bottom: 0px;
+}
