@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      // 버튼을 클릭하면 form을 submit한다? 안된다. 무조건 검증 후 전송해야한다.
+      $(document).ready(function () {
+        $("#mvc").on("click", function (e) {
+          // 일단 이동 기능을 꺼버린다. 검증하기 위해서
+          e.preventDefault();
+          const $username = $("#username").val();
+          const $pwd = $("#pwd").val();
+          if ($username == "" || $pwd == "") {
+            alert("필수입력입니다.");
+            return;
+          }
+          $("#f1").submit();
+        });
+        // 이게 ajax다.
+      });
+
+      $("rest").on("click", function (e) {
+        // 이동을 끄고 껌증하는 코드는 mvc건 rest건 똑같다.
+        e.preventDefault();
+        const $username = $("#username").val();
+        const $pwd = $("#pwd").val();
+        if ($username == "" || $pwd == "") {
+          alert("필수입력입니다.");
+          return;
+        }
+        const params = {
+          $username: $("#username").val(),
+          $pwd: $("#pwd").val(),
+        };
+
+        $.ajax({
+          url: "xxx",
+          method: "post",
+          data: params,
+          success: function () {},
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="xxx" id="f1" method="post">
+      <input type="text" id="username" name="username" />
+      <input type="text" id="pwd" name="pwd" />
+      <button id="mvc">mvc로 보내기</button>
+      <button id="rest">rest로 보내기</button>
+    </form>
+  </body>
+</html>

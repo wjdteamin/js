@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#add").on("click", function (e) {
+          // #add버튼을 클릭하면 여기가 실행된다.
+
+          // 클릭하면 바로 넘어가는 것이 아니라 이동하는 동작과 함께 2가지로 이루어져 있다.
+          // 그래서 클릭을 해서 들어왔을 때, 이동 동작을 막는 것이다.
+
+          // 버튼이나 a와 2가지 동작을 가지는 요소의 두번째 동작(이동)을 막는다.
+          e.preventDefault();
+
+          const title = $("#title").val();
+          if (title == "") {
+            alert("제목을 입력하세요");
+            // e.preventDefault()이 없으면 return을 해도 form은 submit이 된다.
+
+            return;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="서버주소" method="post" enctype="multipart/form-data">
+      <!-- id는 자바스크립트를 통제, name은 서버에서  -->
+      <input type="text" id="title" />
+
+      <!-- 버튼을 클릭하면 form이 날라가는 것이다. -->
+      <!--
+        form 안에 있어서 버튼은 무조건 서버로 넘어가는 것이다. 
+      -->
+      <button id="add">쓰기</button>
+    </form>
+  </body>
+</html>

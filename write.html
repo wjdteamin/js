@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Document</title>
+    <script>
+      $(document).ready(function () {
+        $("#add").on("click", function () {
+          const $name = $("#name").val();
+          const $address = $("#address").val();
+          const $tel = $("#tel").val();
+          if ($name == "" || $address == "" || $tel == "") {
+            alert("이름, 연락처 ,주소는 필수입력입니다.");
+            return;
+          }
+          // js로 form을 서버로 넘기자
+          $("#frm").submit();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 
+        1. MVC방식(프론트의 서버의 부하)
+        - 서버에서 화면까지 책임진다.
+        - 서버는 html 또는 이동할 주소를 보내준다.
+        - render_template(html이름), redirect(주소)
+
+        2. REST 방식 
+        - 프론트와 백은 서로 대등한 계약 관계 
+        - 백은 프론트에 데이터만 보내준다.
+        - 화면이동이 필요한 경우 프론트에서 이동 (location.href)
+        
+        3. form을 submit 방식은 MVC
+        - form을 submit하면 서버가 이동할 주소를 보내준다. 
+
+        4. 파일업로드를 하는 경우 반드시 form-data가 지정해야한다!
+        form-data를 지정하지 않으면 서버로 글자만 전송 
+        null 값이 들어오면 form-data를 지정하지 않아서 그렇다. 
+
+        5. form안에 있는 <button>을 클릭하면 submit한다.
+
+
+           $(document).ready 이벤트는 jQuery 이벤트
+          화면이 준비됐다....이벤트가 뭐지? -> reay
+          자바스크립트의 load 이벤트
+     -->
+
+    <!-- 연락처를 작성하고 수동으로 /list.html로 이동해야한다.-->
+    <h1>연락처 작성 form으로</h1>
+    <!-- 사진업로드를 할려면 -> enctype="multipart/form-data" -->
+    <form action="http://192.168.0.177:8081/write" method="post" enctype="multipart/form-data" id="frm">
+      <input type="file" name="photo" />
+      <input type="text" name="name" id="name" />
+      <input type="text" name="address" id="address" />
+      <input type="text" name="tel" id="tel" />
+      <button type="button" id="add">추가하기</button>
+      <!-- 서버로 넘기기 싫으면 type=button을 적어주면 된다. -->
+    </form>
+  </body>
+</html>

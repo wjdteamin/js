@@ -14,16 +14,15 @@
         $.ajax({
           url: "http://192.168.0.177:8081/list",
           success: function (result) {
-            //console.log(result);
+            console.log(result);
             for (let i of result) {
               let html = `
               <tr>
-                <td>${i.cno}</td>
-                <td><a href="read.html?cno=${i.cno}">${i.name}</td>
-                <td>${i.address}</td>
-                <td>${i.tel}</td>
-              </tr>
-              `;
+                <th>${i.cno}</th>
+                <th> <a href="read.html?cno=${i.cno}">${i.name}</th>
+                <th>${i.address}</th>
+                <th>${i.tel}</th>
+              </tr>`;
               $("#tbody").append(html);
             }
           },
@@ -43,7 +42,7 @@
       <nav>
         <ul>
           <li><a href="list.html">HOME</a></li>
-          <li><a href="write.html">WRITE</a></li>
+          <li><a href="write4.html">WRITE</a></li>
         </ul>
       </nav>
       <main>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(document).ready(function () {
+        $("#add").on("click", function (e) {
+          e.preventDefault();
+          //검증 생략
+
+
+          const params = {
+            name: $("#name").val(),
+            address: $("#address").val(),
+            tel: $("#tel").val(),
+          };
+          $.ajax({
+            url: "http://192.168.0.177:8081/write",
+            method: "post",
+            data: params,
+            success: function () {
+              location.href = "list.html";
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="frm">
+      <input type="text" name="name" id="name" placeholder="이름" />
+      <input type="text" name="address" id="address" placeholder="주소" />
+      <input type="text" name="tel" id="tel" placeholder="연락처" />
+      <button id="add">추가</button>
+    </form>
+  </body>
+</html>
