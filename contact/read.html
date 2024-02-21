@@ -12,6 +12,7 @@
       // read.html?cno=얼마
       // querystring : 주소창으로 정보를 전달하는 문자열
       // location.search : querystring을 잘라낸다.
+      // http://192.168.0.60:5500/tset/read.html?cno=43
       $(document).ready(function () {
         const searchParam = new URLSearchParams(location.search);
         const cno = searchParam.get("cno");

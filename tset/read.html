@@ -10,11 +10,13 @@
     <title>연락처 관리 - 읽기</title>
     <script>
       $(document).ready(function () {
-        const searchParam = new URLSearchParams(location.search);
+        //console.log(location.search);
+        const searchParam = new URLSearchParams(location.search); //http://192.168.0.60:5500/tset/read.html?cno=40
+        console.log(searchParam);
         const cno = searchParam.get("cno");
-        //console.log(cno)
+        console.log(cno);
         if (cno === null) {
-          location.href("list.html");
+          location.href = "list.html";
         }
         const param = {
           cno: cno,
@@ -23,9 +25,7 @@
         $.ajax({
           url: "http://192.168.0.177:8081/read",
           data: param,
-          success : function(result){
-            
-          }
+          success: function (result) {},
         });
       });
     </script>
